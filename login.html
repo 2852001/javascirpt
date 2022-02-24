@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+  //Form validation logic
+  function validate() 
+  {
+	//request data gathering logic
+	var uname = document.loginform.username.value;
+	var password = document.loginform.password.value;
+	if (uname == "")
+	{
+		alert("Please enter username");
+		return false;
+	}
+	if (password == "")
+	{
+		alert("Please enter password");
+		return false;
+	}
+	if (password<6)
+	{
+		alert ("password should be 6 characters");
+		return false;
+	}
+	return true;
+	  }
+  </script>
+ </head>
+ <body>
+ <center>
+ <form name="loginform" action = "Success.html" onsubmit = "return validate()">
+ <h2> Login page!!! </h2 >
+  <label> Enter UserName</label>
+  <input type="text" name="username"/><br><br>
+  <label> Enter Password</label>
+  <input type="password" name="password"/><br><br>
+  <input type="submit" value="Login"/>
+  </form>
+  </center>
+ </body>
+</html>
